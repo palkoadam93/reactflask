@@ -1,0 +1,8 @@
+<html>
+<head>
+  <title>Minta oldal</title>
+</head>
+<body>
+  <h1>Hello, Render világ!</h1>
+</body>
+</html>
