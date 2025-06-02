@@ -1,0 +1,115 @@
+/* Alap világos téma */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9fb;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+  background-color: #1976d2;
+  padding: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1976d2;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* === Sötét mód === */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav {
+  background-color: #1f2937;  /* sötétebb kék/fekete */
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background-color: #181818;
+}
+
+body.dark-mode .card {
+  background-color: #242424;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .card p {
+  color: #bbb;
+}
+
+body.dark-mode .card a {
+  color: #90caf9; /* világos kék */
+}
