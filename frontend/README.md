@@ -68,3 +68,56 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# ReactFlask
+
+Ez egy egyszerű példa React frontend + Flask backend alkalmazásra.
+
+## Követelmények
+
+- Python 3.8 vagy újabb
+- Node.js 14 vagy újabb
+- npm vagy yarn csomagkezelő
+
+## Telepítés
+
+### Backend
+
+1. Hozz létre és aktiválj egy virtuális környezetet (ajánlott):
+
+python -m venv venv
+Windows PowerShell: .\venv\Scripts\Activate
+Telepítsd a Python csomagokat: pip install -r requirements.txt
+Indítsd el a Flask szervert: python backend/app.py
+
+A backend alapértelmezés szerint a http://localhost:5000 címen fut.
+
+Frontend
+Lépj a frontend könyvtárba:
+
+cd frontend
+Telepítsd a függőségeket:
+
+npm install
+Indítsd el a React fejlesztői szervert:
+
+npm start
+A frontend a http://localhost:3000 címen lesz elérhető.
+
+Használat
+A kezdőlapon választhatsz regisztráció vagy bejelentkezés között.
+
+Jelenleg az adatok csak a memóriában tárolódnak, így a szerver újraindításakor elvesznek.
+
+A jövőben tervezett fejlesztések: adatbázis integráció, token alapú autentikáció.
+
+Kapcsolat
+Ha kérdésed vagy javaslatod van, írj bátran!
+
+yaml
+Másolás
+Szerkesztés
+
+---
+
+Ha szeretnéd, be is illeszthetem neked a fájlokat és segítek a projekt struktúrában. Szólj, ha kell!
