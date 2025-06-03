@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Register from './Register';
-import Login from './Login';
+import Register from './components/Register';
+import Login from './components/Login';
 
 function App() {
   const [page, setPage] = useState('home'); // 'home', 'register', 'login'
