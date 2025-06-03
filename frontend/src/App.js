@@ -1,20 +1,16 @@
 import /*React,*/ { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// importok a COMPONENTS mappából!
+import Home from './components/Home';
+import Header from './components/Header';
 //import CourseCard from './components/CourseCard';
 import CourseDetail from './components/CourseDetail';
 import Courses from './components/Courses';
+
 import { useParams } from 'react-router-dom';
 
-// Kezdőlap komponens
-function Home() {
-  return (
-    <div className="container">
-      <h1>Üdv az oktatási platformon!</h1>
-      <p>Válassz egy kurzust vagy böngéssz a menüben.</p>
-      <p>További hasznos tippekért kövess be!</p>
-    </div>
-  );
-}
+
 
 // CourseDetail route paraméter kezelés
 function CourseDetailWrapper() {
@@ -34,26 +30,11 @@ function App() {
     }
   }, [darkMode]);
 
+  const toggleDarkMode = () => setDarkMode(prev => !prev);
+
   return (
     <Router>
-      <nav>
-        <Link to="/">Főoldal</Link>
-        <Link to="/courses">Kurzusok</Link>
-        <button 
-          onClick={() => setDarkMode(prev => !prev)} 
-          style={{
-            marginLeft: 'auto',
-            backgroundColor: 'transparent',
-            border: '1px solid white',
-            color: 'white',
-            padding: '0.3rem 0.8rem',
-            cursor: 'pointer',
-            borderRadius: '4px'
-          }}
-        >
-          {darkMode ? 'Világos mód' : 'Sötét mód'}
-        </button>
-      </nav>
+      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       <Routes>
         <Route path="/" element={<Home />} />
