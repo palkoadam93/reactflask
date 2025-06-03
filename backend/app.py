@@ -1,15 +1,13 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+import json
 
 app = Flask(__name__)
 CORS(app)
 
-courses = [
-    {"id": 1, "name": "Python alapok", "desc": "Tanuld meg a Python alapjait!", "author": "Kiss Anna"},
-    {"id": 2, "name": "Flask webfejlesztés", "desc": "Webalkalmazás backend Pythonban.", "author": "Nagy Péter"},
-    {"id": 3, "name": "Gépi tanulás", "desc": "Bevezetés a gépi tanulás világába.", "author": "Szabó László"},
-    {"id": 4, "name": "Alkalmazott buddhizmus", "desc": "Lazítson, úgy sincs értelme semminek.", "author": "Szergej Lukjanyenko"},
-]
+# JSON fájl betöltése
+with open("courses.json", "r", encoding="utf-8") as f:
+    courses = json.load(f)
 
 @app.route('/api/courses')
 def get_courses():

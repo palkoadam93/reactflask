@@ -7,7 +7,7 @@ function Courses() {
   useEffect(() => {
     fetch('http://localhost:5000/api/courses')
       .then(res => res.json())
-      .then(data => setCourses(data));
+      .then(data => setCourses(data)); // backend válasz elmentése
   }, []);
 
   return (
