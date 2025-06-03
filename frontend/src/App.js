@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import /*React,*/ { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import CourseCard from './components/CourseCard';
+//import CourseCard from './components/CourseCard';
 import CourseDetail from './components/CourseDetail';
 import Courses from './components/Courses';
 import { useParams } from 'react-router-dom';
@@ -11,6 +11,7 @@ function Home() {
     <div className="container">
       <h1>Üdv az oktatási platformon!</h1>
       <p>Válassz egy kurzust vagy böngéssz a menüben.</p>
+      <p>További hasznos tippekért kövess be!</p>
     </div>
   );
 }
