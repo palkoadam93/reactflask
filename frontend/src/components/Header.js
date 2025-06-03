@@ -1,25 +1,35 @@
 import { Link } from 'react-router-dom';
 
 function Header({ darkMode, toggleDarkMode }) {
-  return (
-    <nav style={{ display: 'flex', alignItems: 'center' }}>
+  /*return (
+    <nav>
       <Link to="/">Főoldal</Link>
       <Link to="/courses" style={{ marginLeft: '1rem' }}>Kurzusok</Link>
       <button 
+        className="dark-mode-toggle"
         onClick={toggleDarkMode} 
-        style={{
-          marginLeft: 'auto',
-          backgroundColor: 'transparent',
-          border: '1px solid white',
-          color: 'white',
-          padding: '0.3rem 0.8rem',
-          cursor: 'pointer',
-          borderRadius: '4px'
-        }}
       >
         {darkMode ? 'Világos mód' : 'Sötét mód'}
       </button>
     </nav>
+  );*/
+
+  return (
+    <header className="site-header">
+      <div className="header-top">
+        <h1 className="site-title">Turul Akadémia</h1>
+      </div>
+      <nav className="site-nav">
+        <Link to="/">Főoldal</Link>
+        <Link to="/courses">Kurzusok</Link>
+        <button 
+          className="dark-mode-toggle"
+          onClick={toggleDarkMode}
+        >
+          {darkMode ? 'Világos mód' : 'Sötét mód'}
+        </button>
+      </nav>
+    </header>
   );
 }
 

@@ -1,0 +1,38 @@
+.site-header {
+  background-color: #1976d2;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Fejléc teteje (logo, cím) */
+.header-top {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Navigáció */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 1.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.site-nav a:hover {
+  opacity: 0.8;
+}
